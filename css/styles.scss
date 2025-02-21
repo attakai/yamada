@@ -1,6 +1,7 @@
 html {
     font-size: 2vw;
     font-style: none;
+    scroll-behavior: smooth;
 }
 @media screen and (min-width: 500px) {
     html {
@@ -32,9 +33,24 @@ body {
         }
     }
     section#pc {
+        width: 100vw;
+        height: 100vh;
+        background: url(../img/pc_bg.png);
+        background-size: 105%;
+        background-position-y: top;
+        background-position-x: right;
+        overflow-y: hidden;
+        .scroll {
+            overflow-y: auto;
+            height: 100%;
+        }
         main {
+            background-color: #fff;
             width: 500px;
             position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
             .hamburger {
                 position: fixed;
                 top: -10rem;
@@ -353,7 +369,8 @@ body {
                     width: 100%;
                     margin-top: 3rem;
                     overflow: hidden;
-                    margin-bottom: 3rem;
+                    margin-bottom: 5rem;
+                    padding: 0 3rem;
                 }
                 .sample-slider .swiper-slide{
                     border-radius: 20px;
@@ -773,7 +790,7 @@ body {
         @media screen and (min-width:500px) {
             main {
                 width: 500px;
-                overflow: hidden;
+                overflow-x: hidden;
                 .hamburger {
                     display: none;
                 }
